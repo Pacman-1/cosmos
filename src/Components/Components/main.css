@@ -14,10 +14,15 @@
     margin-top: 10%;
   
 }
-.info-one,.info-two{
+.info-one{
     display: flex;
     flex-direction: column;
     margin:0px 50px 0px 50px;
+}
+.info-two{
+    display: flex;
+    flex-direction: column;
+    margin:0px 50px 0px 30px;
 }
 .hero h3{
     font-size: 50px;
@@ -32,8 +37,13 @@
     justify-content: center;
     align-items: center;
     margin-left: 40px;
+    transition: all 1s ease;
+
 }
 .planet-image img{
     width: 450px;
     overflow: hidden;
+}
+.planet-image:hover{
+    scale: 1.1;
 }

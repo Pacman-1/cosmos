@@ -1,11 +1,43 @@
 import "./main.css"
 import planetone from "./planet-one.png"
+import React from 'react';
+import $ from 'jquery';
+
+
+
+    
+
+
+
 
 const Main = ()=>{
+
+       $(document).ready(function(){
+
+        $("#btn-search").on("click",function(e){
+            e.preventDefault()
+            var test = $("#input-text").val()
+
+            $(".Name").val("hi")
+
+            console.log(test)
+        })
+       
+   
+    });
+
+
 return(
+    
     <div className="main">
         <div className="planet-name">
-        <h1 className="">Name:</h1>
+        <h1 className="Name">Name:</h1>
+        <div className="search-bar">
+        <form className="example "  action="action_page.php" >
+        <input type="text" placeholder="Search.." name="search" id="input-text"/>
+        <button type="submit" id="btn-search"><i className="fa-solid fa-satellite-dish"></i></button>
+        </form>
+        </div>
 
         </div>
 
@@ -28,7 +60,9 @@ return(
             </div>
         </div>
     </div>
+    
 )
 }
+
 
 export default Main

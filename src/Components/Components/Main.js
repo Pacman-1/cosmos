@@ -3,7 +3,7 @@ import planetone from "./planet-one.png"
 import React from 'react';
 import {useState} from 'react';
 import $ from 'jquery'
-const id =document.getElementById("input-text")
+let ids =document.getElementById("input-text")
 
 
 
@@ -11,11 +11,12 @@ const id =document.getElementById("input-text")
 
 
 const Main = ()=>{
-    var names = id.value
     
+    let names =ids.value
+
     $.ajax({
         method: 'GET',
-        url: 'https://api.api-ninjas.com/v1/planets?name=' + names ,
+        url: 'https://api.api-ninjas.com/v1/planets?name=' + names,
         headers: { 'X-Api-Key': 'LUzifa1Hcd3nt987OZgdkA==8nL9HBP8W1PZUT84'},
         contentType: 'application/json',
         success: function(result) {
@@ -41,11 +42,10 @@ const Main = ()=>{
         event.preventDefault();
     
         // 👇️ set value of input field
-        setName(id.value);
+        setName(ids.value);
        
       }
       
-
 
 
 

@@ -1,11 +1,8 @@
 import "./main.css"
 import planetone from "./planet-one.png"
 import React from 'react';
-import $ from 'jquery';
 import {useState} from 'react';
-
-
-const name = document.getElementsByClassName("Name")
+import $ from 'jquery'
 const id =document.getElementById("input-text")
 
 
@@ -14,24 +11,49 @@ const id =document.getElementById("input-text")
 
 
 const Main = ()=>{
+    var names = id.value
+    
+    $.ajax({
+        method: 'GET',
+        url: 'https://api.api-ninjas.com/v1/planets?name=' + names ,
+        headers: { 'X-Api-Key': 'LUzifa1Hcd3nt987OZgdkA==8nL9HBP8W1PZUT84'},
+        contentType: 'application/json',
+        success: function(result) {
+            console.log(result);
+        },
+        error: function ajaxError(jqXHR) {
+            console.error('Error: ', jqXHR.responseText);
+        }
+    });
 
 
-      const [message, setMessage] = useState('Name');
+    // Use states
+      const [name, setName] = useState('Name');
+      const [Mass, setMass] = useState('Mass');
+      const [Radius, setRadius] = useState('Radius');
+      const [Temp, setTemp] = useState('Temp');
+      const [years, setYears] = useState('Light Years Away:');
+      const [star, setStar] = useState('Host Star Size:');
+      const [startemp, setStarTemp] = useState('Host Star Temperature:');
+
 
       const handleClick = event => {
         event.preventDefault();
     
         // 👇️ set value of input field
-        setMessage(id.value);
+        setName(id.value);
+       
       }
       
 
 
-return(
+
+
+    return(
     
     <div className="main">
         <div className="planet-name">
-        <h1 className="Name">{message}</h1>
+        <h1 className="Name">{name}</h1>
         <div className="search-bar">
         <form className="example "  action="action_page.php" >
         <input type="text" placeholder="Search.." name="search" id="input-text"/>
@@ -43,9 +65,9 @@ return(
 
         <div className="hero">
             <div className="info-one">
-                <h3 className="planet-mass">Mass:</h3>
-                <h3 className="planet-radius">Radius:</h3>
-                <h3 className="planet-temp">Temp:</h3>
+                <h3 className="planet-mass">{Mass}</h3>
+                <h3 className="planet-radius">{Radius}</h3>
+                <h3 className="planet-temp">{Temp}</h3>
             </div>
             
             <div className="planet-image">
@@ -53,9 +75,9 @@ return(
             </div>
 
             <div className="info-two">
-            <h3 className="Years-away" >Light Years away:</h3>
-            <h3 className="host-star">Host Star Size:</h3>
-            <h3 className="host-star-temp">Temp of Host Star:</h3>
+            <h3 className="Years-away" >{years}</h3>
+            <h3 className="host-star">{star}</h3>
+            <h3 className="host-star-temp">{startemp}</h3>
 
             </div>
         </div>

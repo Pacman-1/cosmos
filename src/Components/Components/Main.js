@@ -3,10 +3,7 @@ import planetone from "./planet-one.png"
 import React from 'react';
 import {useState} from 'react';
 import $ from 'jquery'
-import axios from "axios";
-let test = document.getElementById("input-text");
-
-
+let masss = document.getElementById("planet-mass")
 
 
 
@@ -16,7 +13,6 @@ const Main = ()=>{
    
     // Use states
       const [message, setMessage] = useState("Name");
-      const [name, setName] = useState("Name");
 
       const [Mass, setMass] = useState('Mass');
       const [Radius, setRadius] = useState('Radius');
@@ -24,18 +20,26 @@ const Main = ()=>{
       const [years, setYears] = useState('Light Years Away:');
       const [star, setStar] = useState('Host Star Size:');
       const [startemp, setStarTemp] = useState('Host Star Temperature:');
+
+
 //
 
 
 
       const handleChange = event => {
-
+       
         setMessage(event.target.value)
-        
+        setMass("...")
+        setRadius("...")
+        setTemp("...")
+        setYears("...")
+        setStar("...")
+        setStarTemp("...")        
       };
 
       const handleClick = event => {
         event.preventDefault();
+        
 
         var name = message
         $.ajax({
@@ -58,9 +62,11 @@ const Main = ()=>{
         setMessage("Planet Name: " + result[0].name)
 
 
-
             },
+            
             error: function ajaxError(jqXHR) {
+                
+              
                 console.error('Error: ', jqXHR.responseText);
             }
 
@@ -91,9 +97,9 @@ const Main = ()=>{
 
         <div className="hero">
             <div className="info-one">
-                <h3 className="planet-mass">{Mass}</h3>
-                <h3 className="planet-radius">{Radius}</h3>
-                <h3 className="planet-temp">{Temp}</h3>
+                <h3 className={`${Mass === "..."? "dot-pulse":"planet-mass"}`}>{Mass}</h3>
+                <h3 className={`${Radius === "..."? "dot-pulse":"planet-radius"}`}>{Radius}</h3>
+                <h3 className={`${Temp === "..."? "dot-pulse":"planet-temp"}`}>{Temp}</h3>
             </div>
             
             <div className="planet-image">
@@ -101,9 +107,9 @@ const Main = ()=>{
             </div>
 
             <div className="info-two">
-            <h3 className="Years-away" >{years}</h3>
-            <h3 className="host-star">{star}</h3>
-            <h3 className="host-star-temp">{startemp}</h3>
+            <h3 className={`${years === "..."? "dot-pulse":"years-away"}`} >{years}</h3>
+            <h3 className={`${star === "..."? "dot-pulse":"host-star"}`}>{star}</h3>
+            <h3 className={`${startemp === "..."? "dot-pulse":"host-star-temp"}`}>{startemp}</h3>
 
             </div>
         </div>

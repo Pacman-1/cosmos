@@ -34,15 +34,13 @@
     display: flex;
     justify-content: space-between;
 }
-.planet-name button{
 
-}
 .planet-image{
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 40px;
-    transition: all 1s ease;
+    transition: all 2s ease;
 
 }
 .planet-image img{
@@ -52,6 +50,15 @@
 .planet-image:hover{
     scale: 1.1;
 }
+
+
+.planet-image-effect{
+  -webkit-animation: spin 100s linear infinite;
+  animation: spin 100s linear infinite;
+
+}
+
+
 /* Style the search field */
 form.example input[type=text] {
     padding: 10px;
@@ -88,9 +95,9 @@ form.example input[type=text] {
   .dot-pulse {
     position: relative;
     left: -9999px;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
     background-color: #ffffff;
     color: #ffffff;
     box-shadow: 9999px 0 0 -5px #ffffff;
@@ -103,9 +110,9 @@ form.example input[type=text] {
     display: inline-block;
     position: absolute;
     top: 0;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
     background-color: #ffffff;
     color: #ffffff;
   }
@@ -121,6 +128,8 @@ form.example input[type=text] {
     animation: dotPulseAfter 1.5s infinite linear;
     animation-delay: .5s;
   }
+
+  /* Animations */
   
   @keyframes dotPulseBefore {
     0% {
@@ -160,3 +169,16 @@ form.example input[type=text] {
       box-shadow: 10014px 0 0 -5px #ffffff;
     }
   }
+
+ 
+  @-webkit-keyframes spin {
+    0% { -webkit-transform: rotate(0deg); }
+    100% { -webkit-transform: rotate(360deg); }
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  
+  }
+  

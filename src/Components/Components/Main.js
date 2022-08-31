@@ -55,7 +55,7 @@ const Main = ()=>{
         // 👇️ set value of input field
         setMass("Mass: " +result[0].mass)
         setRadius("Radius: "+result[0].radius)
-        setTemp("Temperature: "+result[0].temperature) 
+        setTemp("Planet Temperature: "+result[0].temperature) 
         setYears("Light Years Away: "+result[0].distance_light_year)
         setStar("Star Size: "+result[0].host_star_mass)
         setStarTemp("Star Temperature: "+result[0].host_star_temperature)
@@ -103,7 +103,7 @@ const Main = ()=>{
             </div>
             
             <div className="planet-image">
-            <img src={planetone} alt="" />
+            <img src={planetone} alt="" className={`${Mass ==="..." ? "planet-image-effect":""}`} />
             </div>
 
             <div className="info-two">

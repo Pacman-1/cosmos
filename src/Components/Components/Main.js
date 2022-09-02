@@ -16,7 +16,7 @@ const Main = ()=>{
 
       const [Mass, setMass] = useState('Mass');
       const [Radius, setRadius] = useState('Radius');
-      const [Temp, setTemp] = useState('Temp');
+      const [Temp, setTemp] = useState('Planet Temperature');
       const [years, setYears] = useState('Light Years Away:');
       const [star, setStar] = useState('Host Star Size:');
       const [startemp, setStarTemp] = useState('Host Star Temperature:');

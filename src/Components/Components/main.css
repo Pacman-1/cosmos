@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Spectral+SC&display=swap');
 
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Spectral SC', serif;
 }
 .main{
     padding: 100px;
@@ -11,7 +13,7 @@
 .hero{
     display: flex;
     justify-content: space-between;
-    margin-top: 10%;
+    
   
 }
 .info-one{
@@ -52,6 +54,11 @@
 }
 
 
+.planet-temp{
+  max-width: 400px;
+ 
+}
+
 .planet-image-effect{
   -webkit-animation: spin 100s linear infinite;
   animation: spin 100s linear infinite;
@@ -68,7 +75,9 @@ form.example input[type=text] {
     width: 80%;
     background: #f1f1f1;
   }
-  
+  .example{
+    margin-top: 20px;
+  }
   /* Style the submit button */
   form.example button {
     float: left;

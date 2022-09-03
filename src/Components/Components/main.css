@@ -64,7 +64,47 @@
   animation: spin 100s linear infinite;
 
 }
+.planet-name form {
+  display:flex
+}
+.buttons{
+  display:flex;
+  flex-direction: row;
+  width:400px;
+  height:50px;
+}
+/* Tooltip container */
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+.tooltiptext p {
+  padding: 5px;
+}
+/* Tooltip text */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 320px;
+  background-color: rgb(107, 107, 107);
+  color: #fff;
+  text-align: center;
+  margin: 40px;
+  padding: 5px 0;
+  border-radius: 6px;
+  transform: translate(-50%, 0);
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
 
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.search-bar{
+  width: 400px;
+}
 
 /* Style the search field */
 form.example input[type=text] {

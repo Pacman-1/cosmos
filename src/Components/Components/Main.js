@@ -3,7 +3,7 @@ import planetone from "./planet-one.png"
 import React from 'react';
 import {useState} from 'react';
 import $ from 'jquery'
-let masss = document.getElementById("planet-mass")
+
 
 
 
@@ -89,7 +89,16 @@ const Main = ()=>{
         <div className="search-bar">
         <form className="example "  action="action_page.php" onSubmit={handleClick} >
         <input type="text" placeholder="Search.." name="search" id="input-text" onChange={handleChange} />
-        <button type="submit"  id="btn-search"><i className="fa-solid fa-satellite-dish"></i></button>
+        <div className="buttons">
+        <button type="submit"  id="btn-search"><i className="fa-solid fa-satellite-dish"></i> </button>
+        <button type="button"><i className="fa-solid fa-key tooltip"> 
+        
+        <span className="tooltiptext"> <p> Mass: mass of the planet in Jupiters</p>  <p> Radius: Average radius of the planet in Jupiters</p> <p> Temperature: Surface temperature of the planet in Kelvin</p> <p> Light Years Away: distance the planet is from Earth in light years</p> <p>Host Star Size: Size of host star in comparison to earths </p>
+        
+        </span></i></button>
+        </div>
+        
+
         </form>
         </div>
 

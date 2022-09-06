@@ -185,16 +185,13 @@ form.example input[type=text] {
  @media only screen and (max-width: 600px) {
   .main h3{
     font-size: 20px;
-    margin: 20px;
+    margin: 10px;
     max-height: 50px;
     white-space: nowrap;
-
   }
 
   .main h1{
     font-size: 20px;
-
-    
   }
   .main {
     margin-right: 20px;
@@ -207,7 +204,7 @@ form.example input[type=text] {
   display: flex;
   align-items: center;
   flex-direction: column;
-  color: #0b7dda;
+  color: #ffffff;
 }
 .hero img{
   height: 150px;

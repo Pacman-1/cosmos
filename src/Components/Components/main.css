@@ -178,6 +178,81 @@ form.example input[type=text] {
     animation-delay: .5s;
   }
 
+
+
+/* Media Queries */ 
+ /* Extra small devices (phones, 600px and down) */
+ @media only screen and (max-width: 600px) {
+  .main h3{
+    font-size: 20px;
+    margin: 20px;
+    max-height: 50px;
+    white-space: nowrap;
+
+  }
+
+  .main h1{
+    font-size: 20px;
+
+    
+  }
+  .main {
+    margin-right: 20px;
+  }
+  .main form {
+    margin-bottom: -40px;
+ 
+  }
+.hero{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #0b7dda;
+}
+.hero img{
+  height: 150px;
+  width: 100px;
+}
+.search-bar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin:0px -120px;
+
+}
+.search-bar input {
+  margin-left: 100px; ;
+
+}
+.search-bar h1{
+  
+  margin: 1px;
+}
+ }
+
+ /* Small devices (portrait tablets and large phones, 600px and up) */
+ @media only screen and (min-width: 600px) {
+
+ }
+ 
+ /* Medium devices (landscape tablets, 768px and up) */
+ @media only screen and (min-width: 768px) {
+
+ }
+ 
+ /* Large devices (laptops/desktops, 992px and up) */
+ @media only screen and (min-width: 992px) {
+
+ }
+ 
+ /* Extra large devices (large laptops and desktops, 1200px and up) */
+ @media only screen and (min-width: 1200px) {
+
+ } 
+
+
+
+
   /* Animations */
   
   @keyframes dotPulseBefore {

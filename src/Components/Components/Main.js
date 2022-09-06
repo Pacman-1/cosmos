@@ -85,8 +85,10 @@ const Main = ()=>{
     <div className="main">
       
         <div className="planet-name">
-        <h1 className="Name">{message}</h1>
+       
         <div className="search-bar">
+        <h1 className="Name">{message}</h1>
+
         <form className="example "  action="action_page.php" onSubmit={handleClick} >
         <input type="text" placeholder="Search.." name="search" id="input-text" onChange={handleChange} />
         <div className="buttons">

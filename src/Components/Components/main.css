@@ -181,6 +181,9 @@ form.example input[type=text] {
 
 
 /* Media Queries */ 
+
+
+
  /* Extra small devices (phones, 600px and down) */
  @media only screen and (max-width: 600px) {
   .main h3{
@@ -225,6 +228,22 @@ form.example input[type=text] {
   
   margin: 1px;
 }
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 320px;
+  background-color: rgb(107, 107, 107);
+  color: #fff;
+  text-align: center;
+  margin: 40px -90px;
+  padding: 5px 0;
+  border-radius: 6px;
+  transform: translate(-50%, 0);
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+
  }
 
  /* Small devices (portrait tablets and large phones, 600px and up) */

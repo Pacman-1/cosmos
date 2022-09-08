@@ -73,6 +73,7 @@
   width:400px;
   height:50px;
 }
+
 /* Tooltip container */
 .tooltip {
   position: relative;
@@ -123,16 +124,18 @@ form.example input[type=text] {
     float: left;
     width: 20%;
     padding: 10px;
-    background: #2196F3;
+    background: #da0b0b;
     color: white;
     font-size: 17px;
     border: 1px solid grey;
     border-left: none; /* Prevent double borders */
     cursor: pointer;
   }
-  
+  input:focus {
+    outline:none;
+}
   form.example button:hover {
-    background: #0b7dda;
+    background: #880707;
   }
   
   /* Clear floats */

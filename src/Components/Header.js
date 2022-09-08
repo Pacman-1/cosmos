@@ -3,7 +3,7 @@ import style from "./Components/header.css"
 
 const Header = () =>{
     return (
-        <h1>Cosmos</h1>
+        <h1 className="title">Cosmos</h1>
     )
 }
 

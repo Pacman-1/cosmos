@@ -95,7 +95,7 @@ const Main = ()=>{
         <button type="submit"  id="btn-search"><i className="fa-solid fa-satellite-dish"></i> </button>
         <button type="button"><i className="fa-solid fa-key tooltip"> 
         
-        <span className="tooltiptext"> <p> Mass: mass of the planet in Jupiters</p>  <p> Radius: Average radius of the planet in Jupiters</p> <p> Temperature: Surface temperature of the planet in Kelvin</p> <p> Light Years Away: distance of planet from Earth in light years</p> <p> Star Size: Size of host star in comparison to earths star </p>
+        <span className="tooltiptext"> <p> Mass: mass of the planet in Jupiters</p>  <p> Radius: Average radius of the planet in Jupiters</p> <p> Temperature: Average surface temperature of the planet or sun in Kelvin</p> <p> Light Years Away: distance of planet from Earth in light years</p> <p> Star Size: Size of host star in comparison to earths star </p>
         
         </span></i></button>
         </div>

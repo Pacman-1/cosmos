@@ -59,7 +59,7 @@ const Main = ()=>{
         setYears("Light Years Away: "+result[0].distance_light_year)
         setStar("Star Size: "+result[0].host_star_mass)
         setStarTemp("Star Temperature: "+result[0].host_star_temperature)
-        setMessage("Planet Name: " + result[0].name)
+        setMessage(result[0].name)
 
 
             },
@@ -72,13 +72,9 @@ const Main = ()=>{
 
             
         });
-        
-    
 
      
       }
-
-
 
     return(
     

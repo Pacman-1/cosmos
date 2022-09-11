@@ -250,24 +250,176 @@ form.example input[type=text] {
  }
 
  /* Small devices (portrait tablets and large phones, 600px and up) */
- @media only screen and (min-width: 600px) {
+ @media only screen and (min-width: 600px) and (max-width: 992px) {
+  .main h3{
+    font-size: 40px;
+    margin: 15px;
+    max-height: 50px;
+    white-space: nowrap;
+  }
+
+  .main h1{
+    white-space: nowrap;
+    font-size: 40px;
+  }
+  .main {
+    margin-right: 20px;
+  }
+  .main form {
+    margin-bottom: -40px;
+ 
+  }
+.hero{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  color: #ffffff;
+}
+.hero img{
+  margin: 40px;
+  height: 150px;
+  width: 150px;
+}
+.search-bar{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 80px;
+
+}
+.search-bar input {
+  margin-left: 100px; ;
+
+}
+.search-bar h1{
+  
+  margin: 1px;
+}
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 320px;
+  background-color: rgb(107, 107, 107);
+  color: #fff;
+  text-align: center;
+  margin: 40px -90px;
+  padding: 5px 0;
+  border-radius: 6px;
+  transform: translate(-50%, 0);
+ 
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+.info-one{
+  margin-right: 200px;
+}
 
  }
  
- /* Medium devices (landscape tablets, 768px and up) */
- @media only screen and (min-width: 768px) {
 
- }
  
  /* Large devices (laptops/desktops, 992px and up) */
  @media only screen and (min-width: 992px) {
+.search-bar {
+  display: flex;
+  max-width: 1000px;
+
+}
+.search-bar h1{
+ width: 100%;
+ line-height: 60px;
+}
+.search-bar form{
+  margin-top: 70px;
+  height: 50px;
+  margin-left: 1000px;
+}
 
  }
+ @media only screen and (min-width: 1440px) {
+  .search-bar {
+    display: flex;
+   
+  }
+  .search-bar h1{
+    margin-left: 30px;
+    font-size: 50px;
+   line-height: 60px;
+  }
+  .search-bar form{
+    margin-top: 70px;
+    height: 50px;
+    margin-left: 600px;
+  }
+ 
+  .hero h3{
+    font-size: 2rem;
+  line-height: 2rem;
+  }
+   }
  
  /* Extra large devices (large laptops and desktops, 1200px and up) */
- @media only screen and (min-width: 1200px) {
+ @media only screen and (min-width: 1920px) {
+.search-bar h1{
+  padding-left: 70px;
+  white-space: nowrap;
+  font-size: 50px;
+}
+.search-bar form{
+  margin-top: 70px;
+  height: 50px;
+  margin-left: 55vw;
+}
+.buttons{
+  
+}
 
- } 
+.hero h3{
+line-height: 50px;
+  font-size: 60px;
+}
+ }
+ 
+ @media only screen and (min-width: 3840px) {
+  .hero h3{
+    white-space: nowrap;
+    margin: 200px 50px;
+    font-size:100px
+  }
+  .hero .info-two{
+    margin-left: 150px;
+  }
+  .hero .info-one{
+    margin-right: 250px;
+  }
+  .hero img{
+    margin: 40px;
+    height: 600px;
+    width: 600px;
+  }
+  .search-bar h1{
+    padding-left: 10vw;
+    font-size: 150px;
+  }
+  .search-bar form{
+    height:150px;
+    margin-left: 60vw;
+  }
+  .search-bar button{
+
+    height: 150px;
+    
+  }
+  .buttons{
+    width: 25vw;
+  }
+  .buttons i {
+    font-size: 35px;
+  }
+  form.example input[type=text] {
+    font-size: 57px;
+  }
+ }
 
 
 

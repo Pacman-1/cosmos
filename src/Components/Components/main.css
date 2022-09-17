@@ -147,8 +147,8 @@ form.example input[type=text] {
   .dot-pulse {
     position: relative;
     left: -9999px;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     border-radius: 10px;
     background-color: #ffffff;
     color: #ffffff;
@@ -162,8 +162,8 @@ form.example input[type=text] {
     display: inline-block;
     position: absolute;
     top: 0;
-    width: 20px;
-    height: 20px;
+    width: 10px;
+    height: 10px;
     border-radius: 10px;
     background-color: #ffffff;
     color: #ffffff;
@@ -214,7 +214,8 @@ form.example input[type=text] {
 }
 .hero img{
   height: 150px;
-  width: 100px;
+  width: 130px;
+  padding: 10px;
 }
 .search-bar{
   display: flex;
@@ -418,6 +419,42 @@ line-height: 50px;
   }
   form.example input[type=text] {
     font-size: 57px;
+  }
+  .dot-pulse {
+    position: relative;
+    left: -9999px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: #ffffff;
+    color: #ffffff;
+    box-shadow: 9999px 0 0 -5px #ffffff;
+    animation: dotPulse 1.5s infinite linear;
+    animation-delay: .25s;
+  }
+  
+  .dot-pulse::before, .dot-pulse::after {
+    content: '';
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 100px;
+    background-color: #ffffff;
+    color: #ffffff;
+  }
+  
+  .dot-pulse::before {
+    box-shadow: 9984px 0 0 -5px #ffffff;
+    animation: dotPulseBefore 1.5s infinite linear;
+    animation-delay: 0s;
+  }
+  
+  .dot-pulse::after {
+    box-shadow: 10014px 0 0 -5px #ffffff;
+    animation: dotPulseAfter 1.5s infinite linear;
+    animation-delay: .5s;
   }
  }
 
